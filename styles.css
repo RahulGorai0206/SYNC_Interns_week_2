@@ -10,14 +10,16 @@
 }
 
 body {
-    background-color: black;
+    background-color: #1f1147;
     overflow: hidden;
+    user-select: none;
+    /* Disable select option */
 }
 
 .main {
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url(./pexels-julia-filirovska-4913769\ \(1\).jpg);
+    background-color: #1f1147;
     transition: 0.3s;
     pointer-events: auto;
 }
@@ -25,32 +27,6 @@ body {
 .main.active {
     filter: blur(15px) !important;
     pointer-events: none;
-}
-
-.head {
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 12vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    backdrop-filter: blur(2px)
-}
-
-.head a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-.logo {
-    font-size: 4rem;
-}
-
-.navbar {
-    width: 30%;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .container {
@@ -76,30 +52,47 @@ body {
 }
 
 .home-content {
+    padding: 15px 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 35vh;
-    width: 25%;
+    height: 55vh;
+    min-width: 50vw;
     align-items: center;
     text-align: center;
     color: white;
+    background-color: #1f1147;
+    border-radius: 35px;
 }
 
 .home-content h1 {
-    font-size: 70px;
+    color: #37E9BB;
+    font-size: 90px;
+    font-weight: 500;
+}
+
+.home-content h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.home-content p {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .home-content button {
     height: 70px;
-    width: 30%;
+    width: 70%;
     border: none;
     color: white;
     font-size: 22px;
-    background-color: black;
+    background-color: #6949FD;
     border-radius: 40px;
     cursor: pointer;
     transition: 0.3s linear;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .home-content button:hover {
@@ -116,8 +109,8 @@ body {
     transform: translate(-50%, -50%);
     width: 30vw;
     background: white;
-    padding: 10px 25px;
-    border-radius: 10px;
+    padding: 20px 45px;
+    border-radius: 40px;
     opacity: 0;
     pointer-events: none;
     transition: 0.3s;
@@ -131,7 +124,7 @@ body {
 
 .popup h1 {
     font-size: 50px;
-    margin-bottom: 10px;
+    margin: 20px 0px;
 }
 
 .info {
@@ -145,8 +138,8 @@ body {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgb(120, 115, 115);
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 30px;
+    padding: 20px 15px;
 }
 
 .info-btn {
@@ -154,14 +147,15 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid rgb(88, 85, 85);
-    font-size: 20px;
+    width: 140px;
+    height: 70px;
+    border-radius: 50px;
+    border: 2px solid #6949FD;
+    font-size: 22px;
+    font-weight: 500;
     text-decoration: none;
     color: white;
-    background-color: black;
+    background-color: #6949FD;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -172,8 +166,8 @@ body {
 }
 
 .popup .popup-btn-grp .info-btn:nth-child(2):hover {
-    background-color: rgb(102, 96, 96);
-    color: rgb(96, 255, 93);
+    background-color: white;
+    color: #6949FD;
 }
 
 .quiz-sec {
@@ -196,8 +190,8 @@ body {
 .quiz-box {
     position: relative;
     background-color: transparent;
-    border-radius: 6px;
-    border: 2px solid #c40094;
+    border-radius: 35px;
+    border: 2px solid #6949FD;
     width: 30%;
     transform: scale(.9);
     transition: 1s;
@@ -226,7 +220,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
-    border-bottom: 2px solid #c40094;
+    border-bottom: 2px solid #6949FD;
 }
 
 .quiz-header span {
@@ -235,9 +229,9 @@ body {
 }
 
 .header-score {
-    background-color: #c40094;
-    border-radius: 6px;
-    padding: 10px;
+    background-color: #6949FD;
+    border-radius: 36px;
+    padding: 15px;
 }
 
 .question-txt {
@@ -253,7 +247,7 @@ body {
     margin: 15px 0px;
     border: 2px solid rgb(255, 255, 255, .2);
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .option.correct {
@@ -280,7 +274,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid #c40094;
+    border-top: 2px solid #6949FD;
 }
 
 .total-question {
@@ -289,9 +283,9 @@ body {
 }
 
 .next-btn {
-    width: 100px;
-    height: 45px;
-    border-radius: 6px;
+    width: 120px;
+    height: 55px;
+    border-radius: 35px;
     background-color: #362953;
     outline: none;
     border: 2px solid rgb(255, 255, 255, .2);
@@ -304,14 +298,14 @@ body {
 }
 
 .next-btn:hover {
-    background-color: #c40094;
-    border: 2px solid #c40094;
+    background-color: #6949FD;
+    border: 2px solid #6949FD;
     color: white;
 }
 
 .next-btn.active {
     pointer-events: auto;
-    border-color: #c40094;
+    border-color: #6949FD;
     color: white;
 }
 
@@ -327,8 +321,8 @@ body {
     color: white;
     width: 30%;
     background-color: transparent;
-    border: 2px solid #c40094;
-    border-radius: 6px;
+    border: 2px solid #6949FD;
+    border-radius: 40px;
     padding: 25px;
     opacity: 0;
     pointer-events: none;
@@ -364,7 +358,7 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: conic-gradient(#c40094 0deg, rgba(255, 255, 255, .1) 0deg);
+    background: conic-gradient(#6949FD 0deg, rgba(255, 255, 255, .1) 0deg);
     margin: 10px 0px;
     display: flex;
     justify-content: center;
@@ -393,20 +387,22 @@ body {
 }
 
 .result-btn button {
-    width: 130px;
-    background-color: #c40094;
-    height: 47px;
-    border: 2px solid #c40094;
+    width: 150px;
+    background-color: #6949FD;
+    height: 57px;
+    border: 2px solid #6949FD;
     outline: none;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 36px;
     font-size: 16px;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0px 10px;
+    transition: 0.5s;
 }
 
 .result-btn button:hover {
-    background-color: #362953;
-    border: 2px solid #c40094;
+    background-color: #ffffff;
+    border: 2px solid #6949FD;
+    color: black;
 }

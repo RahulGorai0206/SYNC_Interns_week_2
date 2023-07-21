@@ -157,7 +157,7 @@ function showResult() {
     let progress = setInterval(() => {
         progressStartValue++;
         if (score > 0) {
-            circularProgress.style.background = `conic-gradient( #c40094 ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 4deg)`;
+            circularProgress.style.background = `conic-gradient( #6949FD ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 4deg)`;
         }
         progressValue.textContent = `${progressStartValue}%`;
         if (progressStartValue == progressEndValue) {
