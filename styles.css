@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Encode+Sans:wght@300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,24 +8,28 @@
     font-family: 'Belanosima', sans-serif;
     font-family: 'Encode Sans', sans-serif;
 }
-body{
+
+body {
     background-color: black;
     overflow: hidden;
 }
-.main{
+
+.main {
     min-width: 100vw;
     min-height: 100vh;
     background-image: url(./pexels-julia-filirovska-4913769\ \(1\).jpg);
     transition: 0.3s;
     pointer-events: auto;
 }
-.main.active{
+
+.main.active {
     filter: blur(15px) !important;
     pointer-events: none;
 }
-.head{
+
+.head {
     width: 100%;
-    top:0;
+    top: 0;
     left: 0;
     height: 12vh;
     display: flex;
@@ -32,25 +37,30 @@ body{
     align-items: center;
     backdrop-filter: blur(2px)
 }
-.head a{
+
+.head a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
-.logo{
+
+.logo {
     font-size: 4rem;
 }
-.navbar{
+
+.navbar {
     width: 30%;
     display: flex;
     justify-content: space-evenly;
 }
-.container{
+
+.container {
     width: 200%;
     height: 100vh;
     display: flex;
     flex-direction: row;
 }
-.home{
+
+.home {
     position: relative;
     left: -25%;
     width: 100%;
@@ -60,10 +70,12 @@ body{
     align-items: center;
     transition: 0.3s ease-in-out;
 }
-.home.active{
+
+.home.active {
     left: 150%;
 }
-.home-content{
+
+.home-content {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -73,10 +85,12 @@ body{
     text-align: center;
     color: white;
 }
-.home-content h1{
+
+.home-content h1 {
     font-size: 70px;
 }
-.home-content button{
+
+.home-content button {
     height: 70px;
     width: 30%;
     border: none;
@@ -87,13 +101,15 @@ body{
     cursor: pointer;
     transition: 0.3s linear;
 }
-.home-content button:hover{
+
+.home-content button:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
     transition: 0.3s linear;
 }
-.popup{
+
+.popup {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -106,20 +122,24 @@ body{
     pointer-events: none;
     transition: 0.3s;
 }
-.popup.active{
+
+.popup.active {
     opacity: 100;
     pointer-events: all;
     transform: translate(-50%, -50%) scale(.9);
 }
-.popup h1{
+
+.popup h1 {
     font-size: 50px;
     margin-bottom: 10px;
 }
-.info{
+
+.info {
     display: block;
     padding: 10px 0px;
 }
-.popup-btn-grp{
+
+.popup-btn-grp {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -128,7 +148,8 @@ body{
     margin-top: 10px;
     padding: 20px;
 }
-.info-btn{
+
+.info-btn {
     padding: 20px;
     display: inline-flex;
     justify-content: center;
@@ -144,15 +165,18 @@ body{
     cursor: pointer;
     transition: 0.3s;
 }
-.popup .popup-btn-grp .info-btn:nth-child(1):hover{
+
+.popup .popup-btn-grp .info-btn:nth-child(1):hover {
     background-color: white;
     color: black;
 }
-.popup .popup-btn-grp .info-btn:nth-child(2):hover{
+
+.popup .popup-btn-grp .info-btn:nth-child(2):hover {
     background-color: rgb(102, 96, 96);
     color: rgb(96, 255, 93);
 }
-.quiz-sec{
+
+.quiz-sec {
     position: relative;
     left: -100%;
     height: 100%;
@@ -164,10 +188,12 @@ body{
     justify-content: center;
     align-items: center;
 }
-.quiz-sec.active{
+
+.quiz-sec.active {
     left: 0;
 }
-.quiz-box{
+
+.quiz-box {
     position: relative;
     background-color: transparent;
     border-radius: 6px;
@@ -182,38 +208,45 @@ body{
     opacity: 0;
     pointer-events: none;
 }
-.quiz-box.active{
+
+.quiz-box.active {
     transform: scale(1);
     opacity: 100;
     pointer-events: auto;
 }
-.quiz-box h1{
+
+.quiz-box h1 {
     font-size: 35px;
     text-align: center;
     margin-bottom: 10px;
 }
-.quiz-header{
+
+.quiz-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
     border-bottom: 2px solid #c40094;
 }
-.quiz-header span{
+
+.quiz-header span {
     font-size: 18px;
     font-weight: 500;
 }
-.header-score{
+
+.header-score {
     background-color: #c40094;
     border-radius: 6px;
     padding: 10px;
 }
-.question-txt{
+
+.question-txt {
     margin: 15px 0px;
     font-size: 30px;
     font-weight: 500;
 }
-.option{
+
+.option {
     width: 100%;
     padding: 20px;
     font-size: 18px;
@@ -222,21 +255,26 @@ body{
     cursor: pointer;
     border-radius: 10px;
 }
-.option.correct{
+
+.option.correct {
     border: 2px solid rgb(15, 179, 67);
     background-color: rgba(25, 240, 25, 0.243);
 }
-.option.incorrect{
+
+.option.incorrect {
     border: 2px solid rgb(179, 15, 15);
     background-color: rgba(240, 25, 25, 0.243);
 }
-.option:hover{
+
+.option:hover {
     background-color: #362953;
 }
-.option.disabled{
+
+.option.disabled {
     pointer-events: none;
 }
-.quiz-footer{
+
+.quiz-footer {
     margin: 15px 0px;
     padding-top: 20px;
     display: flex;
@@ -244,11 +282,13 @@ body{
     align-items: center;
     border-top: 2px solid #c40094;
 }
-.total-question{
+
+.total-question {
     font-size: 20px;
     font-weight: 600;
 }
-.next-btn{
+
+.next-btn {
     width: 100px;
     height: 45px;
     border-radius: 6px;
@@ -262,17 +302,20 @@ body{
     cursor: pointer;
     pointer-events: none;
 }
-.next-btn:hover{
+
+.next-btn:hover {
     background-color: #c40094;
     border: 2px solid #c40094;
     color: white;
 }
-.next-btn.active{
+
+.next-btn.active {
     pointer-events: auto;
     border-color: #c40094;
     color: white;
 }
-.result-box{
+
+.result-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,30 +323,33 @@ body{
     position: absolute;
     top: 20%;
     left: 35%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: white;
     width: 30%;
     background-color: transparent;
     border: 2px solid #c40094;
     border-radius: 6px;
-    padding: 25px ;
+    padding: 25px;
     opacity: 0;
     pointer-events: none;
     transform: scale(.9);
     transition: 1s;
 }
-.result-box.active{
+
+.result-box.active {
     opacity: 100;
     pointer-events: auto;
     transform: scale(1);
     transition: 1s;
 }
-.result-box h2{
+
+.result-box h2 {
     font-size: 52px;
     font-weight: 500;
     margin: 10px 0px;
 }
-.parcentage-container{
+
+.parcentage-container {
     width: 90%;
     padding: 20px;
     display: flex;
@@ -312,18 +358,20 @@ body{
     align-items: center;
     margin: 20px 0px;
 }
-.circular-progress{
+
+.circular-progress {
     position: relative;
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: conic-gradient( #c40094 3.6deg, rgba(255, 255, 255, .1) 4deg);
+    background: conic-gradient(#c40094 0deg, rgba(255, 255, 255, .1) 0deg);
     margin: 10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.circular-progress::before{
+
+.circular-progress::before {
     content: '';
     position: absolute;
     width: 220px;
@@ -331,20 +379,24 @@ body{
     border-radius: 50%;
     background-color: #09001d;
 }
-.progress-value{
-    position: relative; /* For making it above from the .cirtular-progrss */
+
+.progress-value {
+    position: relative;
+    /* For making it above from the .cirtular-progrss */
     font-size: 45px;
     font-weight: 600;
 }
-.score-text{
+
+.score-text {
     margin: 10px 0px;
     font-size: 26px;
 }
-.result-btn button{
+
+.result-btn button {
     width: 130px;
     background-color: #c40094;
     height: 47px;
-    border:2px solid #c40094;
+    border: 2px solid #c40094;
     outline: none;
     cursor: pointer;
     border-radius: 6px;
@@ -353,7 +405,8 @@ body{
     font-weight: 600;
     margin: 0px 10px;
 }
-.result-btn button:hover{
+
+.result-btn button:hover {
     background-color: #362953;
-    border:2px solid #c40094;
+    border: 2px solid #c40094;
 }

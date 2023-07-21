@@ -1,9 +1,9 @@
-let questions=[
+let questions = [
     {
-        numb:1,
-        question:"What Does HTML Stands For?",
-        ans:"C. Hyper Text Markup Language",
-        options:[
+        numb: 1,
+        question: "What Does HTML Stands For?",
+        ans: "C. Hyper Text Markup Language",
+        options: [
             "A. Hyper Type Multi Language",
             "B. Hyper Text Multiple Language",
             "C. Hyper Text Markup Language",
@@ -11,10 +11,10 @@ let questions=[
         ]
     },
     {
-        numb:2,
-        question:"What does CSS stand for?",
-        ans:"A. Cascading Style Sheet",
-        options:[
+        numb: 2,
+        question: "What does CSS stand for?",
+        ans: "A. Cascading Style Sheet",
+        options: [
             "A. Cascading Style Sheet",
             "B. Cute Style Sheet",
             "C. Computer Style Sheet",
@@ -22,10 +22,10 @@ let questions=[
         ]
     },
     {
-        numb:3,
-        question:"What does PHP stand for?",
-        ans:"A. Hypertext Preprocessor",
-        options:[
+        numb: 3,
+        question: "What does PHP stand for?",
+        ans: "A. Hypertext Preprocessor",
+        options: [
             'A. Hypertext Preprocessor',
             'B. Hometext Programming',
             "C. Hypertext Preprogramming",
@@ -33,10 +33,10 @@ let questions=[
         ]
     },
     {
-        numb:4,
-        question:"What does SQL stand for?",
-        ans:"D. Structured Query Language",
-        options:[
+        numb: 4,
+        question: "What does SQL stand for?",
+        ans: "D. Structured Query Language",
+        options: [
             "A. Strength Query Language",
             "B. Stylesheet Query Language",
             "C. Science Question Language",
@@ -44,10 +44,10 @@ let questions=[
         ]
     },
     {
-        numb:5,
-        question:"What does XML stand for?",
-        ans:"D. Extensible Markup Language",
-        options:[
+        numb: 5,
+        question: "What does XML stand for?",
+        ans: "D. Extensible Markup Language",
+        options: [
             "A. Excellent Multiple Language",
             "B. Explore Multiple Language",
             "C. Extra Markup Language",
