@@ -1,17 +1,18 @@
 const startBtn=document.querySelector('.quiz-btn');
-const popup=document.querySelector('.popup');
 const exitBtn=document.querySelector('.exit');
 const main=document.querySelector('.main');
 const continueBtn=document.querySelector('.continue')
+const nextBtn = document.querySelector('.next-btn');
+const popup=document.querySelector('.popup');
 const quizSection=document.querySelector('.quiz-sec');
 const home = document.querySelector('.home');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
 const headerScore = document.querySelector('.header-score');
-const nextBtnn = document.querySelector('.next-btn');
 const resultBox = document.querySelector('.result-box');
 const progressValue = document.querySelector('.progress-value');
 const scoreText = document.querySelector('.score-text');
+const circularProgress = document.querySelector('.circular-progress');
 let count=0;
 let questionCount=1;
 let score=0;
@@ -31,7 +32,6 @@ continueBtn.onclick=()=>{
     main.classList.remove('active');
     showQuestion(0);
 }
-const nextBtn=document.querySelector('.next-btn')
 nextBtn.onclick=()=>{
     if(count<questions.length-1){
         count++;
@@ -42,6 +42,7 @@ nextBtn.onclick=()=>{
         showResult();
     }
 }
+
 function showQuestion(index){
     const questionText=document.querySelector('.question-txt');
     questionText.textContent=`${questions[index].numb} : ${questions[index].question}`;
@@ -63,7 +64,7 @@ function showQuestion(index){
     for (let index = 0; index < option.length; index++) {
         option[index].setAttribute('onclick','optionSelected(this)')
     }
-    nextBtnn.classList.remove('active');
+    nextBtn.classList.remove('active');
 }
 function questionCounter(index){
     const totalQuestion=document.querySelector('.total-question');
@@ -86,17 +87,18 @@ function optionSelected(answer){
     for (let index = 0; index < optionList.children.length; index++) {
         optionList.children[index].classList.add('disabled');
     }
-    nextBtnn.classList.add('active');
+    nextBtn.classList.add('active');
 }
 function showResult(){
     quizBox.classList.remove('active');
     resultBox.classList.add('active');
     scoreText.textContent=`Your Score is ${score} out of ${questions.length}`;
-    let progressStartValue=0;
+    let progressStartValue=-1;
     let progressEndValue=score/questions.length*100;
     let speed =20;
     let progress=setInterval(()=>{
         progressStartValue++;
+        circularProgress.style.background=`conic-gradient( #c40094 ${progressStartValue *3.6}deg, rgba(255, 255, 255, .1) 4deg)`;
         progressValue.textContent=`${progressStartValue}%`;
         if(progressStartValue==progressEndValue){
             clearInterval(progress);
