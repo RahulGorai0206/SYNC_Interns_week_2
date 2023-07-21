@@ -66,6 +66,8 @@ function optionSelected(answer){
     let userAnswer=answer.textContent.replace(/\s+/g, " ").trim();
     let correctAnswer=questions[count].ans;
     if(userAnswer==correctAnswer){
-        console.log(userAnswer+correctAnswer);
+        answer.classList.add('correct');
+    }else{
+        answer.classList.add('incorrect');
     }
 }
