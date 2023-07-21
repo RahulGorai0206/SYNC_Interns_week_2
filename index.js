@@ -7,6 +7,7 @@ const quizSection=document.querySelector('.quiz-sec');
 const home = document.querySelector('.home');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
+const headerScore = document.querySelector('.header-score');
 let count=0;
 let questionCount=1;
 let score=0;
@@ -56,7 +57,6 @@ function showQuestion(index){
     const option=document.querySelectorAll('.option');
     for (let index = 0; index < option.length; index++) {
         option[index].setAttribute('onclick','optionSelected(this)')
-        
     }
 }
 function questionCounter(index){
@@ -68,6 +68,7 @@ function optionSelected(answer){
     let correctAnswer=questions[count].ans;
     if(userAnswer==correctAnswer){
         answer.classList.add('correct');
+        headerScore.textContent=`Score: ${++score} / ${questions.length}`
     }else{
         answer.classList.add('incorrect');
         for (let index = 0; index < optionList.children.length; index++) {
