@@ -3,6 +3,8 @@ const exitBtn=document.querySelector('.exit');
 const main=document.querySelector('.main');
 const continueBtn=document.querySelector('.continue')
 const nextBtn = document.querySelector('.next-btn');
+const tryAgain = document.querySelector('.tryAgain');
+const goToHome = document.querySelector('.go-to-home');
 const popup=document.querySelector('.popup');
 const quizSection=document.querySelector('.quiz-sec');
 const home = document.querySelector('.home');
@@ -42,7 +44,17 @@ nextBtn.onclick=()=>{
         showResult();
     }
 }
-
+tryAgain.onclick=()=>{
+    resultBox.classList.remove('active');
+    quizBox.classList.add('active');
+    count=0;
+    questionCount=1;
+    score=0;
+    nextBtn.classList.remove('active');
+    showQuestion(count);
+    questionCounter(count);
+    headerScore.textContent=`Score: ${score} / ${questions.length}`
+}
 function showQuestion(index){
     const questionText=document.querySelector('.question-txt');
     questionText.textContent=`${questions[index].numb} : ${questions[index].question}`;
