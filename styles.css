@@ -244,7 +244,7 @@ body{
     font-size: 18px;
     font-weight: 600;
     transition: 0.5s;
-    pointer-events: none;
+    cursor: pointer;
 }
 .next-btn:hover{
     background-color: #c40094;
