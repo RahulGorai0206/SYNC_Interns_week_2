@@ -8,6 +8,7 @@ const home = document.querySelector('.home');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
 const headerScore = document.querySelector('.header-score');
+const nextBtnn = document.querySelector('.next-btn');
 let count=0;
 let questionCount=1;
 let score=0;
@@ -58,6 +59,7 @@ function showQuestion(index){
     for (let index = 0; index < option.length; index++) {
         option[index].setAttribute('onclick','optionSelected(this)')
     }
+    nextBtnn.classList.remove('active');
 }
 function questionCounter(index){
     const totalQuestion=document.querySelector('.total-question');
@@ -79,6 +81,6 @@ function optionSelected(answer){
     }
     for (let index = 0; index < optionList.children.length; index++) {
         optionList.children[index].classList.add('disabled');
-        
     }
+    nextBtnn.classList.add('active');
 }

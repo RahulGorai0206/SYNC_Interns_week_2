@@ -257,9 +257,15 @@ body{
     font-weight: 600;
     transition: 0.5s;
     cursor: pointer;
+    pointer-events: none;
 }
 .next-btn:hover{
     background-color: #c40094;
     border: 2px solid #c40094;
+    color: white;
+}
+.next-btn.active{
+    pointer-events: auto;
+    border-color: #c40094;
     color: white;
 }
