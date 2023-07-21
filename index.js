@@ -9,6 +9,7 @@ const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
 const headerScore = document.querySelector('.header-score');
 const nextBtnn = document.querySelector('.next-btn');
+const resultBox = document.querySelector('.result-box');
 let count=0;
 let questionCount=1;
 let score=0;
@@ -35,7 +36,8 @@ nextBtn.onclick=()=>{
         showQuestion(count);
         questionCounter(count)
     }else{
-        console.log("Finished...")
+        console.log("Finished...");
+        showResult();
     }
 }
 function showQuestion(index){
@@ -83,4 +85,8 @@ function optionSelected(answer){
         optionList.children[index].classList.add('disabled');
     }
     nextBtnn.classList.add('active');
+}
+function showResult(){
+    quizBox.classList.remove('active');
+    resultBox.classList.add('active')
 }
