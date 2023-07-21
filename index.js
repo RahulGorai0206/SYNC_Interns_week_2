@@ -62,3 +62,10 @@ function questionCounter(index){
     const totalQuestion=document.querySelector('.total-question');
     totalQuestion.textContent=`${index+1} of ${questions.length} questions`
 }
+function optionSelected(answer){
+    let userAnswer=answer.textContent.replace(/\s+/g, " ").trim();
+    let correctAnswer=questions[count].ans;
+    if(userAnswer==correctAnswer){
+        console.log(userAnswer+correctAnswer);
+    }
+}
