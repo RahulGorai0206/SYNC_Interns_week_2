@@ -10,6 +10,8 @@ const optionList = document.querySelector('.option-list');
 const headerScore = document.querySelector('.header-score');
 const nextBtnn = document.querySelector('.next-btn');
 const resultBox = document.querySelector('.result-box');
+const progressValue = document.querySelector('.progress-value');
+const scoreText = document.querySelector('.score-text');
 let count=0;
 let questionCount=1;
 let score=0;
@@ -88,5 +90,16 @@ function optionSelected(answer){
 }
 function showResult(){
     quizBox.classList.remove('active');
-    resultBox.classList.add('active')
+    resultBox.classList.add('active');
+    scoreText.textContent=`Your Score is ${score} out of ${questions.length}`;
+    let progressStartValue=0;
+    let progressEndValue=score/questions.length*100;
+    let speed =20;
+    let progress=setInterval(()=>{
+        progressStartValue++;
+        progressValue.textContent=`${progressStartValue}%`;
+        if(progressStartValue==progressEndValue){
+            clearInterval(progress);
+        }
+    },speed)
 }
