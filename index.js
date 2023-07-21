@@ -52,6 +52,11 @@ function showQuestion(index){
                 <span>${questions[index].options[3]}</span>
             </div>`;
     optionList.innerHTML=options;
+    const option=document.querySelectorAll('.option');
+    for (let index = 0; index < option.length; index++) {
+        option[index].setAttribute('onclick','optionSelected(this)')
+        
+    }
 }
 function questionCounter(index){
     const totalQuestion=document.querySelector('.total-question');
