@@ -55,6 +55,21 @@ tryAgain.onclick=()=>{
     questionCounter(count);
     headerScore.textContent=`Score: ${score} / ${questions.length}`
 }
+goToHome.onclick=()=>{
+    home.classList.remove('active');
+    quizSection.classList.remove('active');
+    quizBox.classList.remove('active');
+    popup.classList.remove('active');
+    main.classList.remove('active');
+    resultBox.classList.remove('active');
+    count=0;
+    questionCount=1;
+    score=0;
+    nextBtn.classList.remove('active');
+    showQuestion(count);
+    questionCounter(count);
+    headerScore.textContent=`Score: ${score} / ${questions.length}`
+}
 function showQuestion(index){
     const questionText=document.querySelector('.question-txt');
     questionText.textContent=`${questions[index].numb} : ${questions[index].question}`;

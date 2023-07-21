@@ -353,3 +353,7 @@ body{
     font-weight: 600;
     margin: 0px 10px;
 }
+.result-btn button:hover{
+    background-color: #362953;
+    border:2px solid #c40094;
+}
