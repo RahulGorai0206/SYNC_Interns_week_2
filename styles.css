@@ -230,6 +230,9 @@ body{
 .option:hover{
     background-color: #362953;
 }
+.option.disabled{
+    pointer-events: none;
+}
 .quiz-footer{
     margin: 15px 0px;
     padding-top: 20px;
